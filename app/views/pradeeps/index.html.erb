@@ -1,0 +1,21 @@
+<h1>Listing pradeeps</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pradeeps.each do |pradeep| %>
+  <tr>
+    <td><%= link_to 'Show', pradeep %></td>
+    <td><%= link_to 'Edit', edit_pradeep_path(pradeep) %></td>
+    <td><%= link_to 'Destroy', pradeep, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pradeep', new_pradeep_path %>
